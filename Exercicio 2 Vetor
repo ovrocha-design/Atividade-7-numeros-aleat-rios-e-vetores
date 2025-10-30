@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Exercicio2 {
+    public static void main(String[] args) {
+        int Vet = 10;
+        Scanner sc= new Scanner(System.in);
+        int[] numeros = new int[Vet];
+        for (int i = 0; i < Vet; i++) {
+            System.out.print("Digite o número " + (i + 1) + ": ");
+            numeros[i] = sc.nextInt();
+        }
+        System.out.println("\nNúmeros digitados :");
+        imprimirVetor(numeros);
+        System.out.println("\nNúmeros pares :");
+        for (int numero : numeros) {
+            if (numero % 2 == 0) {
+                System.out.println(numero);
+            }
+        }
+        System.out.println("\nNúmeros impares :");
+        for (int numero : numeros) {
+            if (numero % 2 != 0) {
+                System.out.println(numero);
+            }
+        }
+        sc.close();
+    }
+    public static void imprimirVetor(int[] vetor) {
+        System.out.print("[");
+        for (int num : vetor) {
+            System.out.print(num + " ");
+        }
+        System.out.println("]");
+    }
+}
