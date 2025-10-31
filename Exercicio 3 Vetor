@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Exercicio3 {
+    public static void main(String[] args) {
+        int Vetor = 5;
+        Scanner sc = new Scanner(System.in);
+        String[] nomes = new String[Vetor];
+        System.out.println("- Digite 5 nomes -");
+        for (int i = 0; i < Vetor; i++) {
+            System.out.print("Digite o nome " + (i + 1) + ": ");
+            nomes[i] = sc.nextLine();
+        }
+        System.out.println("\nNomes Digitados ");
+        for (String nome : nomes) {
+            System.out.println(nome);
+        }
+        System.out.println("\nNomes digitados do Último para o Primeiro");
+        for (int i = Vetor - 1; i >= 0; i--) {
+            System.out.println(nomes[i]);
+        }
+        String primeiroNome = nomes[0];
+        String ultimoNome = nomes[Vetor - 1];
+        System.out.println("\nPrimeiro nome digitado: " + primeiroNome);
+        System.out.println("Último nome digitado: " + ultimoNome);
+        sc.close();
+    }
+}
