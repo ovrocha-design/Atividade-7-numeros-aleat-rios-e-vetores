@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Exercicio6 {
+    public static void main(String[] args) {
+        int Vetor_A = 4;
+        int Vetor_B = 7;
+        int Vetor_C = Vetor_A + Vetor_B;
+        Scanner scanner = new Scanner(System.in);
+        int[] vetorA = new int[Vetor_A];
+        int[] vetorB = new int[Vetor_B];
+        int[] vetorC = new int[Vetor_C];
+        System.out.println("Escreva 4 números para " + Vetor_A + "os Valores de A ");
+        for (int i = 0; i < Vetor_A; i++) {
+            System.out.print("Digite o elemento A[" + i + "]: ");
+            vetorA[i] = scanner.nextInt();
+        }
+        System.out.println("\nEscreva 7 números para " + Vetor_B + " valores de B ");
+        for (int i = 0; i < Vetor_B; i++) {
+            System.out.print("Digite o elemento B[" + i + "]: ");
+            vetorB[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < Vetor_A; i++) {
+            vetorC[i] = vetorA[i];
+        }
+        for (int i = 0; i < Vetor_B; i++) {
+            int indiceC = Vetor_A + i;
+            vetorC[indiceC] = vetorB[i];
+        }
+        System.out.println("\nOs valores de C = AUB");
+        for (int i = 0; i < Vetor_C; i++) {
+            System.out.println("C[" + i + "] = " + vetorC[i]);
+        }
+        scanner.close();
+    }
